@@ -1,8 +1,10 @@
 let express = require('express')
 let app = express()
 
+app.set("view engine","ejs");
+
 app.get('/', (req,res) => {
-    res.send('hello this is my app')
+    res.render('index')
 })
 
 exports.cf_api = app;
